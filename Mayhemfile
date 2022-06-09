@@ -1,6 +1,6 @@
-project: rnshah9/mayhem-hicolor
+project: hicolor
 target: hicolor
 
 cmds:
-  - cmd: /hicolor/hicolor encode @@
+  - cmd: /hicolor/hicolor encode /test.png
     filepath: /test.png
