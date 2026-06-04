@@ -1,7 +1,11 @@
 FROM --platform=linux/amd64 ubuntu:20.04 as builder
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        build-essential \
+        pkg-config \
+        libpng-dev \
+        zlib1g-dev
 
 ADD . /hicolor
 WORKDIR /hicolor
